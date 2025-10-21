@@ -1,35 +1,50 @@
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { Tabs } from 'expo-router';
-import React from 'react';
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
+    <Tabs screenOptions={{
+      tabBarActiveTintColor: '#ffd33d',
+      headerStyle: {
+        backgroundColor: '#25292e',
+      },
+      headerShadowVisible: false,
+      headerTintColor: '#fff',
+      tabBarStyle: {
+        backgroundColor: '#25292e',
+      },
+    }}>
+      <Tabs.Screen name="index" options={{
+        title: 'Home',
+        tabBarIcon: ({ color, focused }) => (
+          <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
+        ),
+      }} />
+      <Tabs.Screen name="News" options={{
+        title: 'News',
+        tabBarIcon: ({ color, focused }) => (
+          <Ionicons name={focused ? 'newspaper-sharp' : 'newspaper-outline'} color={color} size={24} />
+        ),
+      }} />
+      <Tabs.Screen name="Chat" options={{
+        title: 'Chat',
+        tabBarIcon: ({ color, focused }) => (
+          <Ionicons name={focused ? 'chatbox' : 'chatbox-outline'} color={color} size={24} />
+        ),
+      }} />
+      <Tabs.Screen name="Map" options={{
+        title: 'Map',
+        tabBarIcon: ({ color, focused }) => (
+          <Ionicons name={focused ? 'location' : 'location-outline'} color={color} size={24} />
+        ),
+      }} />
+      <Tabs.Screen name="Donate" options={{
+        title: 'Donate',
+        tabBarIcon: ({ color, focused }) => (
+          <Ionicons name={focused ? 'heart' : 'heart-outline'} color={color} size={24} />
+        ),
+      }} />
     </Tabs>
   );
 }
