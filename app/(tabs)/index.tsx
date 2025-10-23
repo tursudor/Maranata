@@ -1,42 +1,44 @@
 //home page
 
-import { Link } from 'expo-router';
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View style={styles.container} >
-      <Text style={styles.text}>ursu merge fast refreshkl</Text>
-      <Link href="/News" style={styles.button}>
-        News
-      </Link>
-      <Link href="/Chat" style={styles.button}>
-        Chat
-      </Link>
-      <Link href="/Map" style={styles.button}>
-        Map
-      </Link>
-      <Link href="/Donate" style={styles.button}>
-        Donate
-      </Link>
-    </View>
+    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+      <View style={styles.container} >
+        <Text style={styles.text}>Welcome Home
+        </Text>
+        <Text style={styles.text}>
+          Growing together in Faith
+        </Text>
+        <Text style={styles.text}>New Beginning Project</Text>
+        <Text style={styles.text}>Building our new church home, together as one family</Text>
+        <Text style={styles.text}>New Beginning project update</Text>
+        <Text style={styles.text}>35% Complete</Text>
+        <Text style={styles.text}>For whrere two or three gather in My Name, there am I with them. Matthew 18:20 </Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+      </View>
+    </ScrollView>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    backgroundColor: '#ffffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    color: '#fff',
+    color: '#0f0202ff',
   },
   button: {
     fontSize: 20,
     textDecorationLine: 'underline',
-    color: '#fff',
+    color: '#0f0202ff',
   },
 
 });
