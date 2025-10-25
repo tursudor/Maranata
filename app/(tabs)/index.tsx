@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
     // fontFamily: 'sansserif', 
     position: 'absolute',
     top: '40%',
-    left: '15%',
+    left: '1%',
     transform: [{ translateX: -50 }, { translateY: -10 }],
     color: '#ffffff94',
     fontSize: 23,
