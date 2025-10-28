@@ -21,12 +21,6 @@ export default function TabLayout() {
           <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
         ),
       }} />
-      <Tabs.Screen name="News" options={{
-        title: 'News',
-        tabBarIcon: ({ color, focused }) => (
-          <Ionicons name={focused ? 'newspaper-sharp' : 'newspaper-outline'} color={color} size={24} />
-        ),
-      }} />
       <Tabs.Screen name="Chat" options={{
         title: 'Chat',
         tabBarIcon: ({ color, focused }) => (
@@ -43,6 +37,12 @@ export default function TabLayout() {
         title: 'Donate',
         tabBarIcon: ({ color, focused }) => (
           <Ionicons name={focused ? 'heart' : 'heart-outline'} color={color} size={24} />
+        ),
+      }} />
+      <Tabs.Screen name="About" options={{
+        title: 'About',
+        tabBarIcon: ({ color, focused }) => (
+          <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24} />
         ),
       }} />
     </Tabs>
