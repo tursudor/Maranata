@@ -22,15 +22,15 @@ export default function TabLayout() {
         ),
       }} />
       <Tabs.Screen name="Chat" options={{
-        title: 'Chat',
+        title: 'Daily Bread',
         tabBarIcon: ({ color, focused }) => (
-          <Ionicons name={focused ? 'chatbox' : 'chatbox-outline'} color={color} size={24} />
+          <Ionicons name={focused ? 'battery-charging' : 'battery-charging-outline'} color={color} size={24} />
         ),
       }} />
-      <Tabs.Screen name="Map" options={{
-        title: 'Map',
+      <Tabs.Screen name="Media" options={{
+        title: 'Media',
         tabBarIcon: ({ color, focused }) => (
-          <Ionicons name={focused ? 'location' : 'location-outline'} color={color} size={24} />
+          <Ionicons name={focused ? 'image' : 'image-outline'} color={color} size={24} />
         ),
       }} />
       <Tabs.Screen name="Donate" options={{
