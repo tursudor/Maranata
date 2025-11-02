@@ -1,5 +1,6 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context'; // Updated import
 
 export default function TransferDetails() {
   return (
@@ -19,7 +20,7 @@ export default function TransferDetails() {
           </View>
           <View style={styles.detailRow}>
             <Text style={styles.label}>Bank Name:</Text>
-            <Text style={styles.value}></Text>
+            <Text style={styles.value}>Lloyds</Text>
           </View>
           <View style={styles.detailRow}>
             <Text style={styles.label}>Account Number:</Text>
@@ -34,14 +35,14 @@ export default function TransferDetails() {
         {/* Note Section */}
         <View style={styles.note}>
           <Text style={styles.noteText}>
-            💡 <Text style={styles.noteBold}>Note:</Text> Please include your full name as the payment reference. Transfers may take 1–3 business days to appear.
+            💡 <Text style={styles.noteBold}>2Cor 9:7</Text> Fiecare să dea după cum a hotărât în inima lui: nu cu părere de rău sau de silă, căci „pe cine dă cu bucurie îl iubește Dumnezeu”.
           </Text>
         </View>
       </ScrollView>
 
       {/* Footer */}
       <View style={styles.footer}>
-        <Text style={styles.footerText}>© 2025 Your Organization Name</Text>
+        <Text style={styles.footerText}>© 2025 Maranata Fellowship charity</Text>
       </View>
     </SafeAreaView>
   );

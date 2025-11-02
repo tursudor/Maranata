@@ -1,71 +1,4 @@
-// // news page
 
-// import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
-
-// export default function About() {
-//   return (
-//     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-//       <View style={styles.container}>
-//         <Text style={styles.text}>Maranata Bristol</Text>
-//         <Text style={styles.text}>
-//           a community, a place of faith and hope, and most important the Body of Christ.
-//           Our mission is to share God’s love, serve our neighbors, and grow together in Christ.</Text>
-//         <Image
-//           source={require('../../assets/images/david.png')} // 
-//           style={styles.DavidImage}
-//         />
-//         <Text style={styles.text}>Our Pastor
-//           Pastor David Chelba
-//           Pastor David has been leading our congregation with compassion and wisdom for over 10 years. With a heart for people and a passion for the Gospel, he guides our church family in spiritual growth and community outreach.</Text>
-//         <Text style={styles.text}>Our Secretary
-
-//           Bogdan Hreceniuc, Church Secretary
-//           Faithful and dedicated, Bogdan ensures that the daily life of our church runs smoothly. From organizing events to supporting ministries, he serves with excellence and joy.</Text>
-//         <Text style={styles.text}>Join Us
-
-//           We invite you to worship with us and experience the warmth of our church family.
-//           Sunday Service: 17:00 - 19:30
-//           Location: 40 Materman Road, BS14 8SW, Christ the Servant Church.
-//           Contact: contact@maranatafellowship.co.uk</Text>
-//         {/* <Link href="/" style={styles.button}>
-//           Home
-//         </Link> */}
-//       </View>
-//     </ScrollView>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#ffffffff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   text: {
-//     color: '#0f0202ff',
-//   },
-//   button: {
-//     fontSize: 20,
-//     textDecorationLine: 'underline',
-//     color: '#0f0202ff',
-//   },
-//   DavidImage: {
-//      // width: '100%',
-//     // height: '100%',
-//     // borderRadius: 10,
-//     width: 52,
-//     height: 80,
-//     // resizeMode: "contain",
-//     // marginTop: -10,
-//     padding: 0,
-//     // borderRadius: 25,
-//     overflow: 'hidden', /// ensures corners are clipped properly
-//     borderTopLeftRadius: 20,
-//     borderTopRightRadius: 20,
-//   },
-
-// });
 
 import React from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
@@ -74,7 +7,7 @@ export default function AboutScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.header}>Maranata Bristol</Text>
-      <Text style={styles.subHeader}> a community, a place of faith and hope, a charity and most important the Body of Christ.</Text>
+      <Text style={styles.subHeader}> a community, a place of faith and hope, a charity and most important the FAMILY of Christ.</Text>
       <Image
         source={require("../../assets/images/mara.jpg")} // 👈 your uploaded image here
         style={styles.pastorImage}

@@ -63,17 +63,6 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
     color: '#0f0202ff',
   },
-  // image: {
-  //   width: 352,
-  //   height: 480,
-  //   resizeMode: "cover",
-  //   marginTop: -10,
-  //   paddingTop: 0,
-  //   // borderRadius: 25,
-  //   overflow: 'hidden', // ensures corners are clipped properly
-  //   borderTopLeftRadius: 20,
-  //   borderTopRightRadius: 20,
-  // },
   card: {
     backgroundColor: '#fff',
     borderRadius: 25,
@@ -172,25 +161,19 @@ const styles = StyleSheet.create({
     position: 'relative',  // makes text position relative to this container
     width: 352,
     height: 480,
-    // padding: 0,
-    // margin: 0,
+
   },
   CardImage: {
-    // width: '100%',
-    // height: '100%',
-    // borderRadius: 10,
+
     width: 352,
     height: 480,
-    // resizeMode: "contain",
-    // marginTop: -10,
+
     padding: 0,
-    // borderRadius: 25,
     overflow: 'hidden', /// ensures corners are clipped properly
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
   },
   TextOverlap: {
-    // fontFamily: 'sansserif', 
     position: 'absolute',
     top: '40%',
     left: '1%',
