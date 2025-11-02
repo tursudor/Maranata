@@ -1,256 +1,119 @@
+import React from 'react';
+import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-// import { Link } from 'expo-router';
-// import { ScrollView, StyleSheet, Text, View } from "react-native";
-
-// export default function News() {
-//   return (
-//     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-//       <View style={styles.container}>
-//         <Text style={styles.text}>Doante page</Text>
-//         <Link href="/" style={styles.button}>
-//           Home
-//         </Link>
-//       </View>
-//     </ScrollView>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#ffffffff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   text: {
-//     color: '#0f0202ff',
-//   },
-//   button: {
-//     fontSize: 20,
-//     textDecorationLine: 'underline',
-//     color: '#0f0202ff',
-//   },
-
-// });
-
-import React, { useState } from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, ScrollView } from "react-native";
-import { ProgressBar } from "react-native-paper";
-
-export default function DonateScreen() {
-  const [amount, setAmount] = useState("");
-  const [selectedAmount, setSelectedAmount] = useState(null);
-
-  const donationAmounts = [25, 50, 100];
-
+export default function TransferDetails() {
   return (
-    <ScrollView style={styles.container}>
-      {/* Header */}
-      <Text style={styles.headerTitle}>New Beginning Project</Text>
-      <Text style={styles.headerSubtitle}>
-        Building our new church home, together as one family
-      </Text>
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
+        {/* Header Section */}
+        <View style={styles.header}>
+          <Text style={styles.headerText}>Transfer Details</Text>
+        </View>
 
-      {/* Banner Image */}
-      <Image
-        source={{ uri: "https://images.unsplash.com/photo-1503387762-592deb58ef4e" }}
-        style={styles.bannerImage}
-      />
+        {/* Transfer Information Section */}
+        <View style={styles.detailsContainer}>
+          <Text style={styles.title}>Bank Transfer Information</Text>
+          <View style={styles.detailRow}>
+            <Text style={styles.label}>Account Name:</Text>
+            <Text style={styles.value}>Maranata Fellowship</Text>
+          </View>
+          <View style={styles.detailRow}>
+            <Text style={styles.label}>Bank Name:</Text>
+            <Text style={styles.value}></Text>
+          </View>
+          <View style={styles.detailRow}>
+            <Text style={styles.label}>Account Number:</Text>
+            <Text style={styles.value}>56483262</Text>
+          </View>
+          <View style={styles.detailRow}>
+            <Text style={styles.label}>Sort Code</Text>
+            <Text style={styles.value}>30-90-89</Text>
+          </View>
+        </View>
 
-      {/* Intro */}
-      <Text style={styles.sectionTitle}>Support the Vision</Text>
-      <Text style={styles.sectionText}>
-        Every gift moves us closer to opening the doors of our new spiritual home. Together, we’re shaping a place of worship, community, and hope for generations to come.
-      </Text>
+        {/* Note Section */}
+        <View style={styles.note}>
+          <Text style={styles.noteText}>
+            💡 <Text style={styles.noteBold}>Note:</Text> Please include your full name as the payment reference. Transfers may take 1–3 business days to appear.
+          </Text>
+        </View>
+      </ScrollView>
 
-      {/* Progress */}
-      <View style={styles.progressContainer}>
-        <ProgressBar progress={0.35} color="#C69C3B" style={styles.progressBar} />
-        <Text style={styles.progressText}>35% Funded</Text>
+      {/* Footer */}
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>© 2025 Your Organization Name</Text>
       </View>
-
-      {/* Donation Options */}
-      <View style={styles.amountContainer}>
-        {donationAmounts.map((value) => (
-          <TouchableOpacity
-            key={value}
-            style={[
-              styles.amountButton,
-              selectedAmount === value && styles.amountButtonSelected,
-            ]}
-            onPress={() => {
-              setSelectedAmount(value);
-              setAmount(String(value));
-            }}
-          >
-            <Text
-              style={[
-                styles.amountText,
-                selectedAmount === value && styles.amountTextSelected,
-              ]}
-            >
-              ${value}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </View>
-
-      {/* Custom Amount */}
-      <TextInput
-        style={styles.input}
-        placeholder="Custom Amount"
-        keyboardType="numeric"
-        value={amount}
-        onChangeText={(text) => {
-          setAmount(text);
-          setSelectedAmount(null);
-        }}
-      />
-
-      {/* Buttons */}
-      <TouchableOpacity style={styles.donateButton}>
-        <Text style={styles.donateButtonText}>Give Once</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={[styles.donateButton, styles.secondaryButton]}>
-        <Text style={[styles.donateButtonText, styles.secondaryButtonText]}>
-          Become a Monthly Partner
-        </Text>
-      </TouchableOpacity>
-
-      {/* Message */}
-      <Text style={styles.footerMessage}>
-        “Thank you for being part of what God is building here. Your prayer, your generosity, and your love make this possible.”
-      </Text>
-
-      {/* Bible Verse */}
-      <Text style={styles.bibleVerse}>
-        “Unless the Lord builds the house, the builders labor in vain.” – Psalm 127:1
-      </Text>
-
-      <Text style={styles.footerText}>© 2025 Your Church Name</Text>
-    </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    paddingHorizontal: 20,
-    paddingTop: 50,
+    backgroundColor: '#faf8f5',
   },
-  headerTitle: {
-    fontSize: 24,
-    fontWeight: "700",
-    color: "#2E2E2E",
-    marginBottom: 4,
+  scrollContainer: {
+    paddingBottom: 20,
   },
-  headerSubtitle: {
-    fontSize: 15,
-    color: "#777",
-    marginBottom: 20,
+  header: {
+    backgroundColor: '#2b2b2b',
+    padding: 15,
+    textAlign: 'center',
   },
-  bannerImage: {
-    width: "100%",
-    height: 200,
-    borderRadius: 12,
-    marginBottom: 25,
-  },
-  sectionTitle: {
+  headerText: {
+    color: '#fff',
     fontSize: 20,
-    fontWeight: "700",
-    color: "#2E2E2E",
-    marginBottom: 8,
+    fontWeight: '600',
   },
-  sectionText: {
-    fontSize: 15,
-    color: "#555",
-    lineHeight: 22,
-    marginBottom: 20,
-  },
-  progressContainer: {
-    marginBottom: 25,
-  },
-  progressBar: {
-    height: 8,
-    borderRadius: 10,
-  },
-  progressText: {
-    marginTop: 6,
-    color: "#8B6C27",
-    fontWeight: "600",
-    fontSize: 14,
-  },
-  amountContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 20,
-  },
-  amountButton: {
-    flex: 1,
-    paddingVertical: 12,
-    marginHorizontal: 5,
-    backgroundColor: "#F5F5F5",
-    borderRadius: 10,
-    alignItems: "center",
-  },
-  amountButtonSelected: {
-    backgroundColor: "#C69C3B",
-  },
-  amountText: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#333",
-  },
-  amountTextSelected: {
-    color: "#fff",
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: "#E0E0E0",
-    borderRadius: 10,
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-    fontSize: 16,
-    marginBottom: 25,
-  },
-  donateButton: {
-    backgroundColor: "#C69C3B",
-    paddingVertical: 14,
-    borderRadius: 10,
-    alignItems: "center",
-    marginBottom: 12,
-  },
-  donateButtonText: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "600",
-  },
-  secondaryButton: {
-    backgroundColor: "#FFF7E6",
-  },
-  secondaryButtonText: {
-    color: "#C69C3B",
-  },
-  footerMessage: {
-    textAlign: "center",
-    fontStyle: "italic",
-    color: "#555",
-    fontSize: 14,
-    lineHeight: 20,
-    marginTop: 25,
-  },
-  bibleVerse: {
-    textAlign: "center",
-    color: "#777",
-    fontSize: 13,
+  detailsContainer: {
+    padding: 20,
+    backgroundColor: '#fff',
     marginTop: 20,
+    borderRadius: 10,
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#333',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  detailRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+    paddingVertical: 5,
+  },
+  label: {
+    fontWeight: '600',
+    color: '#444',
+  },
+  value: {
+    color: '#555',
+    fontWeight: '500',
+  },
+  note: {
+    backgroundColor: '#f8f2e7',
+    padding: 15,
+    marginTop: 20,
+    borderRadius: 8,
+    fontSize: 14,
+  },
+  noteText: {
+    color: '#555',
+  },
+  noteBold: {
+    fontWeight: '600',
+  },
+  footer: {
+    padding: 10,
+    backgroundColor: '#fff',
+    marginTop: 30,
+    textAlign: 'center',
   },
   footerText: {
-    textAlign: "center",
-    color: "#aaa",
-    fontSize: 12,
-    marginVertical: 20,
+    fontSize: 13,
+    color: '#888',
   },
 });
