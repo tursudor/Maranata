@@ -7,7 +7,7 @@ export default function AboutScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.header}>Maranata Bristol</Text>
-      <Text style={styles.subHeader}> a community, a place of faith and hope, a charity and most important the FAMILY of Christ.</Text>
+      <Text style={styles.subHeader}> a community, a place of faith and hope, a charity and most important the F of Christ.</Text>
       <Image
         source={require("../../assets/images/mara.jpg")} // 👈 your uploaded image here
         style={styles.pastorImage}

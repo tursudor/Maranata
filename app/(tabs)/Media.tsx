@@ -182,14 +182,24 @@ import { Image, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } 
 import { Ionicons } from '@expo/vector-icons'; // For icon usage (you can install @expo/vector-icons)
 
 const videos = [
-  { id: 'XeXX8ZpyEP4', title: 'Marius Dragoman - Marturie', category: 'Predici' },
+  { id: 'e3Ls3pPkBfM', title: 'Andrei Dascalu - De ce plângi, pe cine cauți?', category: 'Predici' },
+  { id: 'UZW0lvdilzs', title: 'Cu facliile aprinse - Petrică Vrabioru', category: 'Predici' },
   { id: 'oaDaRAWVIeY', title: '3 sfaturi practice pentru a ajunge la biruinta', category: 'Predici' },
+  { id: 'j3ZtMmUF5yM', title: 'Costica Macoveiciuc - Duhul Sfant', category: 'Predici' },
+  { id: 'C9on3yp_O0k', title: 'Cina Domnului -Beniamin Hari', category: 'Predici' },
   { id: 'Fg0jFGIoIco', title: 'Remus Moldovan - Cum este o familie specială', category: 'Predici' },
-  { id: 'a1s0ZyXcMl4', title: 'Praise and Worship Song 1', category: 'Cantari' },
-  { id: 'e2DwQpZm6Xo', title: 'Praise and Worship Song 2', category: 'Cantari' },
-  { id: 'm3NzQrZtP0Y', title: 'Praise and Worship Song 3', category: 'Cantari' },
-  { id: 'r5Vs4PQg1j8', title: 'Poem - A Story of Faith', category: 'Poezii' },
-  { id: 't8kVZb9tYlU', title: 'Poem - The Power of Prayer', category: 'Poezii' },
+  { id: 'ZimPtjkIIp0', title: 'David Chelba - Voi sunteti sarea pământului.', category: 'Predici' },
+  { id: 'vg31x-AJWCU', title: 'Costel Pârnău - Binele care se naște din suferință', category: 'Predici' },
+  { id: '9qWcr0wW5Dc', title: 'M-ai regăsit', category: 'Cantari' },
+  { id: 'c7IY2fXBP0I', title: 'Tara cea de vis, tara cea de sus', category: 'Cantari' },
+  { id: 'jpOB8KFYzvc', title: 'Azi Domnul este Pastorul meu', category: 'Cantari' },
+  { id: 'qhDEHfZfr38', title: 'Stelian Hendre - Cine ești?', category: 'Poezii' },
+  { id: 'WD8HmO_Rhnk', title: 'Tabita Gibu - Priveam la Golgota', category: 'Poezii' },
+  { id: 'pCYT_0kPBuA', title: 'Tabita Gibu - Salvat la 12 fără un minut', category: 'Poezii' },
+  { id: 'KKaLy7NaF9Y', title: 'Tabita Gibu - Eu sunt cu tine', category: 'Poezii' },
+  { id: 'pMpEsInQ_j0', title: 'Raluca Pop - poezie', category: 'Poezii' },
+  { id: '_K5cOyKaFeM', title: 'Zece creștini mititei - poezie', category: 'Poezii' },
+  { id: 'JOJEDPBMxxk', title: 'Botez - Cristian Dumitrescu', category: 'Poezii' },
 ];
 
 export default function MediaScreen() {
